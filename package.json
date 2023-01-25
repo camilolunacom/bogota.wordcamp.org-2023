@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Styling changes for WordCamp Bogotá 2023.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "sass --no-source-map -s compressed style.scss:style.css",
+    "watch": "sass --no-source-map -s compressed --watch style.scss:style.css"
   },
   "repository": {
     "type": "git",
