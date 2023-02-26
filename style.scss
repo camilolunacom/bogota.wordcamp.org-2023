@@ -1,0 +1,102 @@
+// Variables
+:root {
+    --main-theme-color: #1CB1E2;
+    --main-theme-color-sec: #f4b731;
+    --main-theme-color-dark: #06071b;
+}
+
+// Blocks
+.btn-main {
+    background-color: var(--main-theme-color);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+        background-color: var(--main-theme-color-sec);
+        color: var(--main-theme-color-dark);
+    }
+}
+
+
+// Layout
+body main {
+    width: 100%;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+.entry-title {
+    text-align: center;
+}
+
+.entry-content {
+
+}
+
+// Pages
+
+// - Home
+table.tix_tickets_table {
+    border: 1px solid #1fb1e2;
+    thead {
+        border-bottom: 2px solid #1fb1e2;
+        th {
+            color: #6cd9fd;
+        }
+    }
+    + p {
+        text-align: center;
+    }
+}
+
+// - Speakers
+.type-wcb_speaker {
+    .entry-content {
+        .speaker-avatar {
+            display: none;
+        }
+    }
+}
+
+// - Schedule
+.wordcamp-schedule {
+    .wordcamp-schedule__date {
+        text-align: center;
+    }
+}
+
+
+// Utils
+.m-0 {
+    margin: 0 !important;
+}
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.p-0 {
+    padding: 0 !important;
+}
+.pb-0 {
+    padding-bottom: 0 !important;
+}
+
+
+// Overrides
+#tix {
+    .tix-submit {
+        float: none;
+    }
+    input[type=submit] {
+        float: none !important;
+        @extend .btn-main;
+    }
+    .tix-checkout-button {
+        float: none;
+        margin: auto;
+        @extend .btn-main;
+    }
+}
